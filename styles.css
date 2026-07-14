@@ -4,9 +4,11 @@
   --muted: #a8b7c4;
   --soft: rgba(246, 251, 255, 0.72);
   --cyan: #3ee7ff;
-  --green: #54ff9f;
-  --amber: #ffc857;
-  --coral: #ff6f61;
+  --blue: #4d8dff;
+  --deep-blue: #1b4dff;
+  --ice: #b8d7ff;
+  --amber: #7cc8ff;
+  --coral: #5f7cff;
   --panel: rgba(8, 18, 28, 0.72);
   --panel-solid: #0b1520;
   --stroke: rgba(255, 255, 255, 0.16);
@@ -27,7 +29,7 @@ body {
   min-width: 320px;
   background:
     radial-gradient(circle at 12% 20%, rgba(62, 231, 255, 0.13), transparent 28rem),
-    radial-gradient(circle at 88% 58%, rgba(255, 200, 87, 0.1), transparent 26rem),
+    radial-gradient(circle at 88% 58%, rgba(77, 141, 255, 0.16), transparent 26rem),
     #050a10;
   color: var(--ink);
   font-family:
@@ -164,7 +166,7 @@ svg {
   height: 100%;
   object-fit: cover;
   opacity: 0.62;
-  filter: saturate(1.05) contrast(1.06);
+  filter: hue-rotate(58deg) saturate(1.12) contrast(1.08) brightness(0.92);
 }
 
 .hero-shade {
@@ -181,7 +183,7 @@ svg {
 
 .eyebrow {
   margin: 0 0 0.9rem;
-  color: var(--green);
+  color: var(--ice);
   font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -231,7 +233,7 @@ h3 {
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--cyan), var(--green));
+  background: linear-gradient(135deg, var(--cyan), var(--blue));
   color: #031018;
   border-color: transparent;
 }
@@ -247,10 +249,10 @@ h3 {
 }
 
 .terminal-card {
-  border: 1px solid rgba(84, 255, 159, 0.32);
+  border: 1px solid rgba(77, 141, 255, 0.42);
   border-radius: 8px;
   background: rgba(3, 12, 18, 0.76);
-  box-shadow: var(--shadow), inset 0 0 60px rgba(84, 255, 159, 0.05);
+  box-shadow: var(--shadow), inset 0 0 60px rgba(77, 141, 255, 0.08);
   backdrop-filter: blur(16px);
   overflow: hidden;
 }
@@ -274,14 +276,14 @@ h3 {
 }
 
 .terminal-top span:nth-child(3) {
-  background: var(--green);
+  background: var(--blue);
 }
 
 .terminal-card code {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
-  color: #caffdc;
+  color: #d7e8ff;
   font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
   font-size: clamp(0.78rem, 1.2vw, 0.95rem);
   white-space: normal;
@@ -378,7 +380,7 @@ h3 {
 .project-card.featured {
   grid-column: span 2;
   background:
-    linear-gradient(135deg, rgba(62, 231, 255, 0.17), rgba(84, 255, 159, 0.08)),
+    linear-gradient(135deg, rgba(62, 231, 255, 0.18), rgba(77, 141, 255, 0.14)),
     rgba(9, 19, 28, 0.8);
 }
 
@@ -401,7 +403,7 @@ h3 {
 .project-meta span,
 .project-icon {
   border-radius: 999px;
-  background: var(--green);
+  background: var(--blue);
   padding: 0.4rem 0.65rem;
 }
 
@@ -411,7 +413,7 @@ h3 {
 
 .project-card a {
   margin-top: 1rem;
-  color: var(--green);
+  color: var(--ice);
   font-weight: 900;
   transition: transform 180ms ease;
 }
@@ -528,7 +530,7 @@ h3 {
   border-radius: 8px;
   padding: clamp(1.2rem, 5vw, 3rem);
   background:
-    linear-gradient(135deg, rgba(62, 231, 255, 0.12), rgba(255, 111, 97, 0.1)),
+    linear-gradient(135deg, rgba(62, 231, 255, 0.13), rgba(77, 141, 255, 0.16)),
     rgba(8, 17, 25, 0.82);
 }
 
