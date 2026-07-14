@@ -59,7 +59,7 @@ function tick() {
     if (point.y < 0 || point.y > height) point.vy *= -1;
 
     ctx.beginPath();
-    ctx.fillStyle = index % 5 === 0 ? "rgba(124, 200, 255, 0.76)" : "rgba(77, 141, 255, 0.72)";
+    ctx.fillStyle = index % 5 === 0 ? "rgba(255, 200, 87, 0.72)" : "rgba(84, 255, 159, 0.68)";
     ctx.arc(point.x, point.y, point.r, 0, Math.PI * 2);
     ctx.fill();
 
