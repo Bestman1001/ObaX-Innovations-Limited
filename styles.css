@@ -37,6 +37,45 @@ body {
   overflow-x: hidden;
 }
 
+.page-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.page-background img,
+.page-vignette {
+  position: absolute;
+  inset: 0;
+}
+
+.page-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.94;
+  filter: saturate(1.16) contrast(1.12) brightness(1.08);
+}
+
+.page-vignette {
+  background:
+    linear-gradient(90deg, rgba(5, 10, 16, 0.74) 0%, rgba(5, 10, 16, 0.58) 36%, rgba(5, 10, 16, 0.3) 72%),
+    linear-gradient(180deg, rgba(5, 10, 16, 0.48) 0%, rgba(5, 10, 16, 0.2) 44%, rgba(5, 10, 16, 0.74) 100%);
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+}
+
+main,
+.site-footer {
+  z-index: 2;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -61,8 +100,8 @@ svg {
 #signal-canvas {
   position: fixed;
   inset: 0;
-  z-index: -1;
-  opacity: 0.28;
+  z-index: 1;
+  opacity: 0.22;
   pointer-events: none;
 }
 
@@ -148,30 +187,6 @@ svg {
   gap: clamp(1.2rem, 4vw, 3.5rem);
   align-items: center;
   padding: 8rem clamp(1rem, 5vw, 4rem) 5rem;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.hero-bg,
-.hero-shade {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-bg {
-  z-index: -3;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.62;
-  filter: saturate(1.05) contrast(1.06);
-}
-
-.hero-shade {
-  z-index: -2;
-  background:
-    linear-gradient(90deg, rgba(5, 10, 16, 0.92) 0%, rgba(5, 10, 16, 0.76) 38%, rgba(5, 10, 16, 0.36) 70%),
-    linear-gradient(0deg, #050a10 0%, transparent 32%);
 }
 
 .hero-content,
@@ -618,10 +633,10 @@ h3 {
     padding: 7rem 1rem 3.5rem;
   }
 
-  .hero-shade {
+  .page-vignette {
     background:
-      linear-gradient(90deg, rgba(5, 10, 16, 0.92), rgba(5, 10, 16, 0.65)),
-      linear-gradient(0deg, #050a10 0%, transparent 38%);
+      linear-gradient(90deg, rgba(5, 10, 16, 0.82), rgba(5, 10, 16, 0.52)),
+      linear-gradient(180deg, rgba(5, 10, 16, 0.42) 0%, rgba(5, 10, 16, 0.18) 40%, rgba(5, 10, 16, 0.78) 100%);
   }
 
   .signal-strip,
