@@ -136,12 +136,26 @@ svg {
   letter-spacing: 0;
 }
 
-.brand img {
-  width: 2.45rem;
-  height: 2.45rem;
+.brand-logo {
+  position: relative;
+  width: 3.45rem;
+  height: 3.45rem;
+  overflow: hidden;
+  flex: 0 0 auto;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 0.55rem;
 }
 
-.brand span {
+.brand-logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: none;
+  transform: translate(-50%, -50%) scale(1.72);
+}
+
+.brand-name {
   white-space: nowrap;
 }
 
@@ -613,7 +627,7 @@ h3 {
     padding: 0.85rem 1rem;
   }
 
-  .brand span {
+  .brand-name {
     max-width: 8.5rem;
     white-space: normal;
     line-height: 1.05;

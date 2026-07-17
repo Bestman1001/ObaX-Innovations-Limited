@@ -6,5 +6,5 @@ Files:
 - index.html: page structure and content
 - styles.css: responsive visual design
 - script.js: animated background network
-- assets/obax-logo.svg: brand mark
+- assets/obax-logo.png: brand mark
 - assets/obax-hero.png: generated hero image
